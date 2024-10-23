@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="airports" name="airports"><option value="?"></option> an Airport</select>
+    <select id="states" name="states">Select a State</select>
+    <div id="code">?</div>
+    <script>
+        function optionFromObject(item, valueKey, displayKey){
+            let element = document.createElement("option");
+            element.value = item.code;
+            element.innerText = item.city;
+            return element;
+        }
+        const airportList = [
+            {code:"PDX", city:"PORTLAND"},
+            {code:"SEA", city:"SEATTLE"},
+            {code:"ATL", city:"ATLANTA"},
+            {code:"ORL", city:"ORLANDO"},
+        ];
+
+        airportList = airportList.sort((a,b) => a.code < b.code ? -1 : 0);
+
+        for(airport of airportList){
+            airports.appendChild(getElement(airport, "code", "city"))
+        }
+        airports.addEventListener("click", (e)=>{
+            console.log(e);
+            code.innerText = e.target.value);
+        
+    </script>
+</body>
+</html>
