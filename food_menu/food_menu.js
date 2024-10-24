@@ -19,7 +19,7 @@ dessertList: [
 // console.log(menuObject.drinkList)
 for(key in menuObject){
     let list = menuObject[key];
-    console.log(key.toUppercase(), list.length);
+    console.log(key.toUpperCase(), list.length);
     let i = 0;
     for(text of list){
         console.log("\t\t", i, text);
@@ -29,6 +29,6 @@ for(key in menuObject){
     // for(let i=0; i < list.length;){
     //     const text = list[i];
     //     console.log(i, text);
-    }
+    // }
 
 }
